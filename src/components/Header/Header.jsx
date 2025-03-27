@@ -1,7 +1,7 @@
 // src/components/Header/Header.js
 import React from 'react';
 import styles from './Header.module.css';
-import logo from '../../assets/logo.png'; // Asegúrate que la ruta es correcta
+import logo from '../../assets/Logo.png'; // Ruta corregida para el logo
 
 const Header = () => {
   return (
@@ -14,10 +14,10 @@ const Header = () => {
         </a>
         {/* Puedes añadir un menú de navegación simple aquí si lo necesitas */}
         <nav className={styles.nav}>
-           <a href="#about">Nosotros</a>
-           <a href="#services">Servicios</a>
-           <a href="#technology">Tecnología</a>
-           <a href="#contact" className={`btn btn-secondary ${styles.contactBtn}`}>Contacto</a>
+           <a href="#about">About Us</a>
+           <a href="#services">Services</a>
+           <a href="#technology">Technology</a>
+           <a href="#contact" className={`btn btn-secondary ${styles.contactBtn}`}>Contact</a>
         </nav>
       </div>
     </header>

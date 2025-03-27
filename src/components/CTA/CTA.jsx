@@ -6,13 +6,13 @@ const CTA = () => {
   return (
     <section id="contact" className={`${styles.ctaSection} section section-bg`}>
       <div className={`container ${styles.ctaContainer}`}>
-        <h2 className={styles.ctaTitle}>¿Listo para Explorar tu Potencial?</h2>
+        <h2 className={styles.ctaTitle}>Ready to Explore Your Potential?</h2>
         <p className={styles.ctaText}>
-          Hablemos sobre cómo ME Mind Exploration puede ayudarte a alcanzar tus objetivos con soluciones tecnológicas innovadoras.
+          Let's talk about how ME Mind Exploration can help you achieve your goals with innovative technological solutions.
         </p>
-        {/* Cambia esto por un mailto, link a formulario de contacto o modal */}
-        <a href="mailto:contacto@memindexploration.com" className="btn btn-primary">
-          Hablemos de tu Proyecto
+        {/* Change this to a mailto, contact form link, or modal */}
+        <a href="mailto:contact@memindexploration.com" className="btn btn-primary">
+          Let's Discuss Your Project
         </a>
       </div>
     </section>

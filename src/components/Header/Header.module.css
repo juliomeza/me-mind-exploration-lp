@@ -1,13 +1,13 @@
 /* src/components/Header/Header.module.css */
 .header {
-    background-color: var(--bg-color);
+    background-color: #1E212A; /* Color oscuro que coincide con el fondo del logo */
     height: var(--header-height);
     position: fixed; /* O 'sticky' si prefieres */
     top: 0;
     left: 0;
     width: 100%;
     z-index: 1000;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     display: flex;
     align-items: center;
   }
@@ -33,24 +33,26 @@
   .logoText {
     font-size: 1.4rem;
     font-weight: 700;
-    color: var(--primary-color);
+    color: #f1f1f1; /* Color claro para el texto del logo */
   }
   
   .nav a {
     margin-left: 25px;
     font-weight: 400;
-    color: var(--text-color);
+    color: #f1f1f1; /* Color claro para el texto que contrasta con el fondo oscuro */
     font-size: 0.95rem;
   }
   
   .nav a:hover {
-    color: var(--primary-color);
+    color: var(--accent-color); /* Usar el color de acento para el hover */
   }
   
   .contactBtn {
     margin-left: 25px;
     padding: 8px 20px; /* Botón más pequeño en header */
     font-size: 0.9rem;
+    border-color: #f1f1f1; /* Color claro para el borde del botón */
+    color: #f1f1f1; /* Color claro para el texto del botón */
   }
   
   /* Simple responsive para el header (puedes añadir un menú hamburguesa) */

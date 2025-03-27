@@ -7,14 +7,14 @@ const Hero = () => {
     <section id="hero" className={`${styles.hero} section`}>
       <div className={`container ${styles.heroContent}`}>
         <h1 className={styles.headline}>
-          Transforma tu Negocio con <span className={styles.highlight}>IA</span> y Tecnología Avanzada
+          Transform Your Business with <span className={styles.highlight}>AI</span> and Advanced Technology
         </h1>
         <p className={styles.subheadline}>
-          En ME Mind Exploration, creamos soluciones inteligentes a medida: Dashboards Ejecutivos, Portales de Ventas, Integraciones y más, impulsando tu éxito.
+          At ME Mind Exploration, we create tailored intelligent solutions: Executive Dashboards, Sales Portals, Integrations and more, driving your success.
         </p>
         <div className={styles.ctaButtons}>
-          <a href="#services" className="btn btn-primary">Descubre Soluciones</a>
-          <a href="#contact" className="btn btn-secondary">Contáctanos</a>
+          <a href="#services" className="btn btn-primary">Discover Solutions</a>
+          <a href="#contact" className="btn btn-secondary">Contact Us</a>
         </div>
       </div>
       {/* Opcional: Elemento visual abstracto */}

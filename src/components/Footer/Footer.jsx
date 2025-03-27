@@ -8,12 +8,12 @@ const Footer = () => {
     <footer className={styles.footer}>
       <div className="container">
         <p className={styles.copyright}>
-          © {currentYear} ME Mind Exploration. Todos los derechos reservados.
+          © {currentYear} ME Mind Exploration. All rights reserved.
         </p>
-        {/* Opcional: Links a redes sociales o políticas */}
+        {/* Optional: Links to social networks or policies */}
         {/* <div className={styles.footerLinks}>
-          <a href="/privacy-policy">Política de Privacidad</a>
-          <a href="/terms">Términos de Servicio</a>
+          <a href="/privacy-policy">Privacy Policy</a>
+          <a href="/terms">Terms of Service</a>
         </div> */}
       </div>
     </footer>

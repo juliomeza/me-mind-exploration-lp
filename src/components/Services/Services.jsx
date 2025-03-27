@@ -8,27 +8,27 @@ const servicesData = [
   {
     icon: <FaTachometerAlt />,
     title: 'Executive Dashboards',
-    description: 'Visualizaciones de datos interactivas y en tiempo real para tomar decisiones informadas.'
+    description: 'Interactive and real-time data visualizations for informed decision-making.'
   },
   {
     icon: <FaFileAlt />,
-    title: 'Portales de Entrada de Pedidos',
-    description: 'Soluciones web eficientes para la gestión de órdenes de venta, integradas con tus sistemas.'
+    title: 'Sales Order Portals',
+    description: 'Efficient web solutions for sales order management, integrated with your systems.'
   },
   {
     icon: <FaDatabase />,
-    title: 'Integración de Datos',
-    description: 'Conectamos tus bases de datos (SQL, NoSQL, etc.) y APIs para un flujo de información unificado.'
+    title: 'Data Integration',
+    description: 'We connect your databases (SQL, NoSQL, etc.) and APIs for a unified information flow.'
   },
    {
     icon: <FaBrain />,
-    title: 'Soluciones con IA',
-    description: 'Implementamos modelos de Inteligencia Artificial para optimizar procesos, predecir tendencias y más.'
+    title: 'AI Solutions',
+    description: 'We implement Artificial Intelligence models to optimize processes, predict trends, and more.'
   },
   {
     icon: <FaLaptopCode />,
-    title: 'Landing Pages y Web Apps',
-    description: 'Diseño y desarrollo de presencias web profesionales, rápidas y atractivas con React y Python.'
+    title: 'Landing Pages & Web Apps',
+    description: 'Design and development of professional, fast, and attractive web presences with React and Python.'
   }
 ];
 
@@ -36,8 +36,8 @@ const Services = () => {
   return (
     <section id="services" className="section section-bg">
       <div className="container">
-        <h2 className={styles.sectionTitle}>Nuestras Soluciones Tecnológicas</h2>
-        <p className={styles.sectionSubtitle}>Creamos herramientas a medida para potenciar tu negocio.</p>
+        <h2 className={styles.sectionTitle}>Our Technology Solutions</h2>
+        <p className={styles.sectionSubtitle}>We create custom tools to enhance your business.</p>
         <div className={styles.servicesGrid}>
           {servicesData.map((service, index) => (
             <div key={index} className={styles.serviceCard}>

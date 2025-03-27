@@ -7,7 +7,7 @@ import styles from './Technology.module.css';
 const technologies = [
   { name: 'Python', /* iconClass: 'devicon-python-plain' */ },
   { name: 'React', /* iconClass: 'devicon-react-original' */ },
-  { name: 'Inteligencia Artificial', /* icon: FaBrain */ },
+  { name: 'Artificial Intelligence', /* icon: FaBrain */ },
   { name: 'Machine Learning', /* icon: FaRobot */ },
   { name: 'SQL Databases', /* icon: FaDatabase */ },
   { name: 'API Integration', /* icon: FaPlug */ },
@@ -19,9 +19,9 @@ const Technology = () => {
   return (
     <section id="technology" className="section">
       <div className="container">
-        <h2 className={styles.sectionTitle}>Tecnología de Vanguardia</h2>
+        <h2 className={styles.sectionTitle}>Cutting-Edge Technology</h2>
         <p className={styles.sectionSubtitle}>
-          Utilizamos un stack tecnológico moderno y robusto para construir soluciones escalables y eficientes.
+          We use a modern and robust technology stack to build scalable and efficient solutions.
         </p>
         <div className={styles.techGrid}>
           {technologies.map((tech, index) => (
