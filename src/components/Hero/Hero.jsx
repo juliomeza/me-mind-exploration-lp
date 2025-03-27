@@ -6,6 +6,8 @@ const Hero = () => {
   return (
     <section id="hero" className={`${styles.hero} section`}>
       <div className={`container ${styles.heroContent}`}>
+        {/* Elemento invisible para empujar el contenido hacia abajo en dispositivos pequeños */}
+        <div style={{ height: '20px' }} className="mobile-spacer"></div>
         <h1 className={styles.headline}>
           Transform Your Business with <span className={styles.highlight}>AI</span> and Advanced Technology
         </h1>

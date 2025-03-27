@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './About.module.css';
-// Opcional: Si tienes una imagen ilustrativa para esta sección
-// import aboutIllustration from '../../assets/about-illustration.svg';
+// Imagen para la sección About
+import aboutImage from '../../assets/about-image.png';
 
 const About = () => {
   return (
@@ -27,14 +27,14 @@ const About = () => {
           </div>
         </div>
 
-        {/* Columna de Imagen (Opcional) */}
-        {/* <div className={styles.imageContent}>
+        {/* Columna de Imagen */}
+        <div className={styles.imageContent}>
           <img
-            src={aboutIllustration} // Reemplaza con tu imagen
-            alt="Ilustración sobre exploración de datos y tecnología"
+            src={aboutImage}
+            alt="ME Mind Exploration - Data and Technology"
             className={styles.illustration}
           />
-        </div> */}
+        </div>
       </div>
     </section>
   );

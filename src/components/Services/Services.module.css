@@ -21,23 +21,25 @@
   
   .serviceCard {
     background-color: var(--bg-color);
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 35px; /* Más padding */
+    border-radius: 6px;
+    box-shadow: var(--shadow-sm); /* Sombra más sutil */
+    text-align: left; /* Alineado a la izquierda es más moderno */
+    transition: all 0.25s ease;
+    border: 1px solid var(--border-color);
   }
   
   .serviceCard:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 10px 25px rgba(74, 0, 224, 0.1); /* Sombra con color primario sutil */
+    transform: translateY(-5px); /* Movimiento más sutil */
+    box-shadow: var(--shadow-md);
+    border-color: var(--secondary-color);
   }
   
   .iconWrapper {
-    font-size: 3rem; /* Tamaño del icono */
-    color: var(--secondary-color); /* Color de acento para icono */
+    font-size: 2.5rem; /* Tamaño de icono más moderado */
+    color: var(--secondary-color);
     margin-bottom: 1.5rem;
-    display: inline-block; /* Centra el icono */
+    display: block; /* Alineado a la izquierda */
   }
   
   .cardTitle {

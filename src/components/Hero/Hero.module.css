@@ -1,17 +1,13 @@
 /* src/components/Hero/Hero.module.css */
 .hero {
-    background: linear-gradient(135deg, var(--bg-color) 50%, var(--bg-light-gray) 50%); /* Fondo dividido sutil */
-    /* Alternativa: Imagen de fondo sutil */
-    /* background-image: url('../../assets/hero-bg.svg'); */
-    /* background-size: cover; */
-    /* background-position: center; */
+    background-color: var(--bg-color); /* Fondo limpio */
+    position: relative;
     min-height: calc(100vh - var(--header-height)); /* Altura mínima para llenar pantalla */
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding-top: var(--header-height); /* Añadir padding para compensar header fijo */
-    position: relative;
+    padding-top: var(--header-height); /* Compensar header fijo */
     overflow: hidden;
   }
   
@@ -21,29 +17,27 @@
   }
   
   .headline {
-    font-size: 3.5rem; /* Más grande para el Hero */
-    margin-bottom: 1.5rem;
-    font-weight: 700;
+    font-size: 3.2rem; /* Tamaño más moderado */
+    margin-bottom: 1.8rem;
+    font-weight: 600; /* Peso de fuente más sutil */
     color: var(--primary-color);
+    letter-spacing: -0.5px; /* Espaciado más compacto para verse moderno */
+    line-height: 1.2;
   }
   
   .highlight {
-    /* Usar el color de acento para destacar IA */
-    color: var(--accent-color);
-    background: linear-gradient(90deg, var(--secondary-color), var(--primary-color));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    /* text-fill-color: transparent; */ /* Descomentar si es necesario */
-  
+    /* Color de acento más sutil */
+    color: var(--secondary-color);
+    position: relative;
   }
   
   .subheadline {
-    font-size: 1.2rem;
-    max-width: 700px;
-    margin: 0 auto 2.5rem auto;
-    color: #444; /* Un gris más oscuro para mejor lectura */
-    font-weight: 300;
+    font-size: 1.15rem;
+    max-width: 650px;
+    margin: 0 auto 3rem auto; /* Más espacio antes de los botones */
+    color: #555; 
+    font-weight: 400;
+    line-height: 1.7;
   }
   
   .ctaButtons a {
@@ -57,20 +51,23 @@
     right: -100px;
     width: 400px;
     height: 400px;
-    background: radial-gradient(circle, rgba(142, 45, 226, 0.1) 0%, rgba(142, 45, 226, 0) 70%);
+    background: radial-gradient(circle, rgba(52, 152, 219, 0.08) 0%, rgba(52, 152, 219, 0) 70%); /* Color más sutil */
     border-radius: 50%;
     z-index: 1;
     pointer-events: none; /* Para que no interfiera con clicks */
   }
   
   
+  /* Tabletas */
   @media (max-width: 768px) {
     .hero {
       min-height: 70vh; /* Reducir altura en móvil */
       text-align: center;
+      padding-top: calc(var(--header-height) + 30px); /* Aumentar padding superior en móviles */
     }
     .headline {
       font-size: 2.5rem;
+      margin-top: 20px; /* Espacio adicional arriba */
     }
     .subheadline {
       font-size: 1rem;
@@ -89,5 +86,21 @@
       height: 300px;
       bottom: -50px;
       right: -50px;
+    }
+  }
+  
+  /* Teléfonos pequeños */
+  @media (max-width: 480px) {
+    .hero {
+      padding-top: calc(var(--header-height) + 50px); /* Padding aún mayor para teléfonos pequeños */
+      min-height: auto; /* Altura automática para evitar problemas */
+      padding-bottom: 40px;
+    }
+    .heroContent {
+      padding-top: 10px; /* Espacio adicional superior */
+    }
+    .headline {
+      font-size: 2.1rem; /* Texto más pequeño */
+      margin-top: 25px; /* Más espacio superior */
     }
   }

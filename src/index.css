@@ -2,18 +2,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap'); /* Ejemplo de fuente */
 
 :root {
-  /* Inspirado en un look tech minimalista - AJUSTA ESTOS COLORES según tu logo */
-  --primary-color: #4A00E0; /* Un morado/azul profundo */
-  --secondary-color: #8E2DE2; /* Un morado más vibrante como acento */
-  --accent-color: #00E0C6; /* Un teal/cyan como acento brillante */
+  /* Nueva paleta de colores tech moderna */
+  --primary-color: #2C3E50; /* Azul oscuro más sutil y profesional */
+  --secondary-color: #3498DB; /* Azul medio como acento */
+  --accent-color: #1ABC9C; /* Verde-azulado más sutil como acento brillante */
   --text-color: #333;
   --text-light: #F8F9FA;
   --bg-color: #FFFFFF;
-  --bg-light-gray: #F8F9FA;
-  --border-color: #E0E0E0;
+  --bg-light-gray: #F7FAFC; /* Gris muy sutil */
+  --border-color: #E2E8F0;
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.05);
+  --shadow-md: 0 4px 6px rgba(0,0,0,0.05);
+  --shadow-lg: 0 10px 15px rgba(0,0,0,0.03);
 
   --font-family: 'Poppins', sans-serif;
   --header-height: 80px;
+  --section-spacing: 80px; /* Añadir más espacio entre secciones */
 }
 
 * {
@@ -72,50 +76,55 @@ img {
   padding: 0 20px;
 }
 
-/* Utilidad para secciones */
+/* Utilidad para secciones - Más espacio y mejor contraste */
 .section {
-  padding: 60px 0;
+  padding: var(--section-spacing) 0;
+  position: relative;
 }
 
 .section-bg {
   background-color: var(--bg-light-gray);
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
 }
 
-/* Botón base */
+/* Botón base - Diseño moderno */
 .btn {
   display: inline-block;
   padding: 12px 28px;
   border: none;
-  border-radius: 5px;
-  font-size: 1rem;
-  font-weight: 600;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  font-weight: 500;
   cursor: pointer;
   text-align: center;
-  transition: all 0.3s ease;
+  transition: all 0.25s ease;
   text-decoration: none;
+  letter-spacing: 0.2px;
 }
 
 .btn-primary {
-  background: linear-gradient(90deg, var(--secondary-color) 0%, var(--primary-color) 100%);
+  background-color: var(--secondary-color); /* Color plano en lugar de gradiente */
   color: var(--text-light);
-  box-shadow: 0 4px 15px rgba(142, 45, 226, 0.3); /* Sombra sutil con color */
+  box-shadow: var(--shadow-sm);
 }
 
 .btn-primary:hover {
-  background: linear-gradient(90deg, var(--primary-color) 0%, var(--secondary-color) 100%);
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(142, 45, 226, 0.4);
+  background-color: #2980B9; /* Versión más oscura al hacer hover */
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
 }
 
 .btn-secondary {
   background-color: transparent;
   color: var(--primary-color);
-  border: 2px solid var(--primary-color);
+  border: 1px solid var(--border-color); /* Borde más sutil */
 }
 
 .btn-secondary:hover {
-  background-color: var(--primary-color);
-  color: var(--text-light);
+  background-color: rgba(44, 62, 80, 0.05); /* Fondo sutil al hover */
+  color: var(--primary-color);
+  border-color: var(--primary-color);
 }
 
 /* Responsive */
@@ -130,5 +139,22 @@ img {
 
   :root {
     --header-height: 60px;
+  }
+}
+
+/* Fix para dispositivos móviles reales */
+@media (max-width: 480px) {
+  html, body {
+    overflow-x: hidden; /* Prevenir scroll horizontal en móviles */
+  }
+  
+  body {
+    width: 100%;
+    position: relative;
+  }
+  
+  /* Asegurar que el contenido no quede bajo el header en iPhone */
+  .container {
+    padding-top: 5px;
   }
 }

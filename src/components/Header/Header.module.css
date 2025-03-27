@@ -1,15 +1,16 @@
 /* src/components/Header/Header.module.css */
 .header {
-    background-color: var(--primary-color); /* Color primario de la app */
+    background-color: var(--primary-color); /* Azul oscuro más sutil */
     height: var(--header-height);
-    position: fixed; /* O 'sticky' si prefieres */
+    position: fixed; 
     top: 0;
     left: 0;
     width: 100%;
     z-index: 1000;
-    box-shadow: 0 4px 15px rgba(74, 0, 224, 0.3); /* Sombra con el color primario */
+    box-shadow: var(--shadow-sm); /* Sombra más sutil */
     display: flex;
     align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05); /* Borde sutil */
   }
   
   .headerContainer {
@@ -44,17 +45,19 @@
   }
   
   .nav a:hover {
-    color: var(--accent-color); /* Usar el color de acento para el hover */
-    text-shadow: 0 0 3px rgba(255, 255, 255, 0.5);
+    color: var(--accent-color); /* Color de acento más sutil */
+    text-shadow: none;
+    opacity: 0.9; /* Efecto sutil al hover */
   }
   
   .contactBtn {
     margin-left: 25px;
     padding: 8px 20px; /* Botón más pequeño en header */
     font-size: 0.9rem;
-    border-color: #f1f1f1; /* Color claro para el borde del botón */
-    color: #f1f1f1; /* Color claro para el texto del botón */
-    background-color: rgba(255, 255, 255, 0.1); /* Fondo transparente */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Borde más sutil */
+    color: var(--text-light);
+    background-color: rgba(255, 255, 255, 0.08); /* Fondo muy sutil */
+    border-radius: 4px;
   }
   
   /* Simple responsive para el header (puedes añadir un menú hamburguesa) */
