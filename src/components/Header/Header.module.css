@@ -1,13 +1,13 @@
 /* src/components/Header/Header.module.css */
 .header {
-    background-color: #1E212A; /* Color oscuro que coincide con el fondo del logo */
+    background-color: var(--primary-color); /* Color primario de la app */
     height: var(--header-height);
     position: fixed; /* O 'sticky' si prefieres */
     top: 0;
     left: 0;
     width: 100%;
     z-index: 1000;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 15px rgba(74, 0, 224, 0.3); /* Sombra con el color primario */
     display: flex;
     align-items: center;
   }
@@ -45,6 +45,7 @@
   
   .nav a:hover {
     color: var(--accent-color); /* Usar el color de acento para el hover */
+    text-shadow: 0 0 3px rgba(255, 255, 255, 0.5);
   }
   
   .contactBtn {
@@ -53,6 +54,7 @@
     font-size: 0.9rem;
     border-color: #f1f1f1; /* Color claro para el borde del botón */
     color: #f1f1f1; /* Color claro para el texto del botón */
+    background-color: rgba(255, 255, 255, 0.1); /* Fondo transparente */
   }
   
   /* Simple responsive para el header (puedes añadir un menú hamburguesa) */
