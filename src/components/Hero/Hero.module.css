@@ -1,0 +1,93 @@
+/* src/components/Hero/Hero.module.css */
+.hero {
+    background: linear-gradient(135deg, var(--bg-color) 50%, var(--bg-light-gray) 50%); /* Fondo dividido sutil */
+    /* Alternativa: Imagen de fondo sutil */
+    /* background-image: url('../../assets/hero-bg.svg'); */
+    /* background-size: cover; */
+    /* background-position: center; */
+    min-height: calc(100vh - var(--header-height)); /* Altura mínima para llenar pantalla */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: var(--header-height); /* Añadir padding para compensar header fijo */
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .heroContent {
+    position: relative;
+    z-index: 2;
+  }
+  
+  .headline {
+    font-size: 3.5rem; /* Más grande para el Hero */
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+  }
+  
+  .highlight {
+    /* Usar el color de acento para destacar IA */
+    color: var(--accent-color);
+    background: linear-gradient(90deg, var(--secondary-color), var(--primary-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    /* text-fill-color: transparent; */ /* Descomentar si es necesario */
+  
+  }
+  
+  .subheadline {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto 2.5rem auto;
+    color: #444; /* Un gris más oscuro para mejor lectura */
+    font-weight: 300;
+  }
+  
+  .ctaButtons a {
+    margin: 0 10px;
+  }
+  
+  /* Elemento visual abstracto (opcional) */
+  .visualElement {
+    position: absolute;
+    bottom: -100px;
+    right: -100px;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(142, 45, 226, 0.1) 0%, rgba(142, 45, 226, 0) 70%);
+    border-radius: 50%;
+    z-index: 1;
+    pointer-events: none; /* Para que no interfiera con clicks */
+  }
+  
+  
+  @media (max-width: 768px) {
+    .hero {
+      min-height: 70vh; /* Reducir altura en móvil */
+      text-align: center;
+    }
+    .headline {
+      font-size: 2.5rem;
+    }
+    .subheadline {
+      font-size: 1rem;
+    }
+    .ctaButtons {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .ctaButtons a {
+      margin: 10px 0;
+      width: 80%;
+    }
+    .visualElement {
+      width: 300px;
+      height: 300px;
+      bottom: -50px;
+      right: -50px;
+    }
+  }

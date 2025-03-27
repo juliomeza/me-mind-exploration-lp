@@ -1,0 +1,24 @@
+/* src/components/CTA/CTA.module.css */
+.ctaSection {
+    /* Fondo con gradiente sutil o color sólido */
+     background: linear-gradient(135deg, var(--secondary-color) 0%, var(--primary-color) 100%);
+     color: var(--text-light);
+     text-align: center;
+  }
+  
+  /* Sobreescribe el color base del título para que sea legible en fondo oscuro */
+  .ctaTitle {
+    color: var(--text-light);
+    margin-bottom: 1.5rem;
+  }
+  
+  .ctaText {
+    color: rgba(255, 255, 255, 0.9); /* Texto claro pero no blanco puro */
+    max-width: 650px;
+    margin: 0 auto 2rem auto;
+    font-size: 1.1rem;
+    font-weight: 300;
+  }
+  
+  /* Ajustar el botón primario si es necesario para este contexto */
+  /* .ctaSection .btn-primary { ... } */

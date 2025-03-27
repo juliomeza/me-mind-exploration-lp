@@ -1,0 +1,52 @@
+/* src/components/Technology/Technology.module.css */
+.sectionTitle {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  
+  .sectionSubtitle {
+    text-align: center;
+    margin-bottom: 3rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #666;
+  }
+  
+  .techGrid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .techItem {
+    background-color: var(--bg-light-gray);
+    padding: 15px 25px;
+    border-radius: 25px; /* Forma de píldora */
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--primary-color);
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+  }
+  
+  .techItem:hover {
+      background-color: var(--primary-color);
+      color: var(--text-light);
+      border-color: var(--primary-color);
+      transform: scale(1.05);
+  }
+  
+  /* Estilos para iconos si los usas */
+  .techIcon {
+    font-size: 1.5rem;
+    color: inherit; /* Hereda el color del texto del item */
+  }
+  
+  .techName {
+    color: inherit; /* Hereda el color del texto del item */
+  }

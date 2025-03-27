@@ -1,0 +1,110 @@
+.aboutSection {
+    background-color: var(--bg-color); /* Fondo blanco */
+  }
+  
+  .aboutContainer {
+    display: grid;
+    grid-template-columns: 1fr; /* Una columna por defecto */
+    gap: 40px;
+    align-items: center;
+  }
+  
+  .textContent {
+    /* No requiere estilos especiales por defecto */
+  }
+  
+  .title {
+    /* Hereda de los estilos globales, pero puedes ajustar si es necesario */
+    margin-bottom: 1rem;
+    text-align: left; /* Alinear a la izquierda en esta sección */
+  }
+  
+  .subtitle {
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: #555;
+    margin-bottom: 1.5rem;
+  }
+  
+  .subtitle strong {
+    font-weight: 600;
+    color: var(--primary-color);
+  }
+  
+  .description {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.7;
+    margin-bottom: 1.2rem;
+  }
+  
+  .values {
+    margin-top: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+  
+  .values span {
+    display: inline-flex; /* Para alinear icono y texto */
+    align-items: center;
+    background-color: var(--bg-light-gray);
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    color: var(--primary-color);
+    border: 1px solid var(--border-color);
+  }
+  
+  .checkIcon {
+    margin-right: 8px;
+    color: var(--secondary-color); /* Icono con color de acento */
+  }
+  
+  /* Estilos para la imagen si decides usarla */
+  .imageContent {
+    text-align: center; /* Centra la imagen */
+  }
+  
+  .illustration {
+    max-width: 400px; /* Ajusta según tu imagen */
+    width: 100%;
+    height: auto;
+    /* Opcional: añadir un filtro sutil o efecto */
+    /* filter: grayscale(30%); */
+  }
+  
+  /* Media Query para layout de dos columnas en pantallas más grandes */
+  @media (min-width: 992px) {
+    .aboutContainer {
+      grid-template-columns: 1.1fr 0.9fr; /* Texto un poco más ancho que la imagen */
+      gap: 60px;
+    }
+  
+    /* Si quieres la imagen a la izquierda: */
+    /* .textContent { order: 2; } */
+    /* .imageContent { order: 1; } */
+  
+    /* Si quieres la imagen a la derecha (como está por defecto en el HTML): */
+     .textContent { order: 1; }
+     .imageContent { order: 2; }
+  
+     .title {
+       /* font-size: 2.4rem; */ /* Puedes hacerlo un poco más grande si quieres */
+     }
+  }
+  
+  @media (max-width: 768px) {
+    .title {
+      text-align: center; /* Centrar título en móvil */
+    }
+    .subtitle {
+      text-align: center;
+    }
+    .values {
+      justify-content: center; /* Centrar los valores en móvil */
+    }
+    .imageContent {
+       margin-top: 30px; /* Añadir espacio si la imagen está debajo del texto */
+     }
+  }
