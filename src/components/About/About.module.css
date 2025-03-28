@@ -95,8 +95,6 @@
     max-width: 450px; /* Tamaño adaptado a la imagen */
     width: 100%;
     height: auto;
-    border-radius: 6px; /* Bordes ligeramente redondeados */
-    box-shadow: var(--shadow-md); /* Sombra sutil */
     transition: transform 0.3s ease;
   }
   
