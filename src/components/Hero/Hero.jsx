@@ -11,10 +11,6 @@ const Hero = () => {
             <img src={logo} alt="Mind Exploration Logo" className={styles.heroLogo} />
           </div>
           
-          <div className={styles.badge}>
-            Enterprise Data Intelligence Platform
-          </div>
-          
           <h1 className={styles.title}>
             Transform Your Data Operations with{' '}
             <span className={styles.highlight}>Mind Exploration</span>
