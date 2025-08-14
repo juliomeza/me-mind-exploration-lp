@@ -1,7 +1,7 @@
 // src/components/Header/Header.js
 import React from 'react';
 import styles from './Header.module.css';
-import logo from '../../assets/Logo01.png'; // Ruta corregida para el logo
+import logo from '../../assets/Logo.png'; // Ruta corregida para el logo
 
 const Header = () => {
   return (
