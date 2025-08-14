@@ -12,8 +12,8 @@ const platformFeatures = [
   {
     icon: <FaDatabase />,
     title: 'Real-Time ETL',
-    description: 'Bi-directional data sync between SQL Server and PostgreSQL with 2+ years historical backfill.',
-    features: ['Bi-directional sync', '2+ years backfill', 'Automated retries']
+    description: 'Bi-directional data sync between SQL Server and PostgreSQL with comprehensive data migration.',
+    features: ['Bi-directional sync', 'Historical data migration', 'Automated retries']
   },
   {
     icon: <FaCogs />,
@@ -79,17 +79,13 @@ const Services = () => {
           ))}
         </div>
         
-        <div className={styles.pricing}>
-          <div className={`card ${styles.pricingCard}`}>
+        <div className={styles.summary}>
+          <div className={`card ${styles.summaryCard}`}>
             <div className="card-header text-center">
-              <h3 className="card-title">Complete Platform Implementation</h3>
+              <h3 className="card-title">Complete Platform Solution</h3>
               <p className="card-description">
-                All features included - no individual modules. Enterprise-grade solution with full support.
+                All features integrated into a single, comprehensive platform. Enterprise-grade architecture with full technical support and ongoing maintenance.
               </p>
-            </div>
-            <div className="card-content text-center">
-              <div className={styles.price}>$45,000</div>
-              <p className={styles.priceDescription}>One-time implementation fee</p>
             </div>
           </div>
         </div>

@@ -14,8 +14,8 @@ const Footer = () => {
           </div>
           <div className={styles.footerContact}>
             <p><strong>Ready to Transform Your Data Operations?</strong></p>
-            <p>Email: <a href="mailto:contact@mindexploration.ai">contact@mindexploration.ai</a></p>
-            <p>Implementation: $45,000 | Support: $30/user/month</p>
+            <p>Email: <a href="mailto:julio@mindexploration.ai">julio@mindexploration.ai</a></p>
+            <p>Enterprise-grade platforms • Production-ready architecture</p>
           </div>
         </div>
         <div className={styles.footerBottom}>

@@ -32,8 +32,8 @@ const Hero = () => {
               <div className={styles.metricLabel}>Uptime SLA</div>
             </div>
             <div className={styles.metric}>
-              <div className={styles.metricValue}>2+ Years</div>
-              <div className={styles.metricLabel}>Data History</div>
+              <div className={styles.metricValue}>Enterprise</div>
+              <div className={styles.metricLabel}>Security</div>
             </div>
             <div className={styles.metric}>
               <div className={styles.metricValue}>24/7</div>
@@ -48,13 +48,6 @@ const Hero = () => {
             <a href="#services" className="btn btn-outline btn-lg">
               View Features
             </a>
-          </div>
-          
-          <div className={styles.pricing}>
-            <span className={styles.pricingText}>
-              Complete platform implementation from <strong>$45,000</strong> 
-              • Support from <strong>$30/user/month</strong>
-            </span>
           </div>
         </div>
       </div>
