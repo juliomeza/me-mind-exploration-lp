@@ -1,74 +1,93 @@
-/* src/components/Header/Header.module.css */
 .header {
-    background-color: var(--primary-color); /* Azul oscuro más sutil */
-    height: var(--header-height);
-    position: fixed; 
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-    box-shadow: var(--shadow-sm); /* Sombra más sutil */
-    display: flex;
-    align-items: center;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05); /* Borde sutil */
-  }
-  
-  .headerContainer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-  }
-  
-  .logoLink {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  height: var(--header-height);
+  border-bottom: 1px solid hsl(var(--border));
+  background-color: hsl(var(--background));
+  backdrop-filter: blur(8px);
+  background: hsla(var(--background), 0.8);
+}
+
+.headerContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.logoLink {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  font-weight: 700;
+  gap: 0.75rem;
+}
+
+.logo {
+  height: 2rem;
+  width: auto;
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.05));
+}
+
+.logoText {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: hsl(var(--foreground));
+  letter-spacing: 0.025em;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.navLink {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: hsl(var(--muted-foreground));
+  text-decoration: none;
+  transition: color 0.15s ease-in-out;
+  position: relative;
+}
+
+.navLink:hover {
+  color: hsl(var(--foreground));
+}
+
+.navLink::after {
+  content: '';
+  position: absolute;
+  bottom: -0.25rem;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: hsl(var(--primary));
+  border-radius: 1px;
+  transform: scaleX(0);
+  transition: transform 0.15s ease-in-out;
+}
+
+.navLink:hover::after {
+  transform: scaleX(1);
+}
+
+/* Mobile navigation */
+@media (max-width: 768px) {
+  .nav {
+    display: none;
   }
   
   .logo {
-    height: 45px; /* Ajusta según tu logo */
-    margin-right: 10px;
+    height: 1.75rem;
   }
   
   .logoText {
-    font-size: 1.4rem;
-    font-weight: 700;
-    color: #f1f1f1; /* Color claro para el texto del logo */
+    font-size: 1rem;
   }
   
-  .nav a {
-    margin-left: 25px;
-    font-weight: 400;
-    color: #f1f1f1; /* Color claro para el texto que contrasta con el fondo oscuro */
-    font-size: 0.95rem;
-  }
-  
-  .nav a:hover {
-    color: var(--accent-color); /* Color de acento más sutil */
-    text-shadow: none;
-    opacity: 0.9; /* Efecto sutil al hover */
-  }
-  
-  .contactBtn {
-    margin-left: 25px;
-    padding: 8px 20px; /* Botón más pequeño en header */
-    font-size: 0.9rem;
-    border: 1px solid rgba(255, 255, 255, 0.2); /* Borde más sutil */
-    color: var(--text-light);
-    background-color: rgba(255, 255, 255, 0.08); /* Fondo muy sutil */
-    border-radius: 4px;
-  }
-  
-  /* Simple responsive para el header (puedes añadir un menú hamburguesa) */
-  @media (max-width: 768px) {
-    .nav {
-      display: none; /* Oculta la nav en móvil, requiere menú hamburguesa */
-    }
-    .logo {
-      height: 35px;
-    }
-    .logoText {
-      font-size: 1.2rem;
-    }
-  }
+  /* Add mobile menu button here if needed */
+}

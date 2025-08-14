@@ -1,36 +1,70 @@
 // src/components/Technology/Technology.js
 import React from 'react';
 import styles from './Technology.module.css';
-// Podrías usar iconos de tecnologías si quieres (ej. de Devicon: npm i devicon)
-// import 'devicon/devicon.min.css';
-
-const technologies = [
-  { name: 'Python', /* iconClass: 'devicon-python-plain' */ },
-  { name: 'React', /* iconClass: 'devicon-react-original' */ },
-  { name: 'Artificial Intelligence', /* icon: FaBrain */ },
-  { name: 'Machine Learning', /* icon: FaRobot */ },
-  { name: 'SQL Databases', /* icon: FaDatabase */ },
-  { name: 'API Integration', /* icon: FaPlug */ },
-  { name: 'Cloud Platforms', /* icon: FaCloud */ },
-  { name: 'Modern Frontend', /* icon: FaCode */ },
+const technologyStacks = [
+  {
+    category: 'Backend & Data',
+    technologies: [
+      { name: 'Python', detail: 'FastAPI, Django, data processing' },
+      { name: 'PostgreSQL', detail: 'Primary database with advanced features' },
+      { name: 'SQL Server', detail: 'Enterprise data integration' },
+      { name: 'Firebase', detail: 'Authentication & real-time features' }
+    ]
+  },
+  {
+    category: 'Frontend & UI',
+    technologies: [
+      { name: 'React', detail: 'Modern component architecture' },
+      { name: 'TypeScript', detail: 'Type-safe development' },
+      { name: 'Responsive Design', detail: 'Mobile-first approach' },
+      { name: 'Dark Mode', detail: 'Professional UI patterns' }
+    ]
+  },
+  {
+    category: 'AI & Analytics',
+    technologies: [
+      { name: 'OpenAI GPT', detail: 'Natural language processing' },
+      { name: 'Data Visualization', detail: 'Interactive charts & dashboards' },
+      { name: 'Predictive Analytics', detail: 'ML-powered insights' },
+      { name: 'NLP Queries', detail: 'Conversational data access' }
+    ]
+  },
+  {
+    category: 'Infrastructure',
+    technologies: [
+      { name: 'Render/Heroku', detail: 'Scalable cloud hosting' },
+      { name: 'ETL Pipelines', detail: 'Real-time data synchronization' },
+      { name: 'API Security', detail: 'Rate limiting & key management' },
+      { name: 'Monitoring', detail: 'Health checks & alerting' }
+    ]
+  }
 ];
 
 const Technology = () => {
   return (
     <section id="technology" className="section">
       <div className="container">
-        <h2 className={styles.sectionTitle}>Cutting-Edge Technology</h2>
+        <h2 className={styles.sectionTitle}>Production-Ready Technology Stack</h2>
         <p className={styles.sectionSubtitle}>
-          We use a modern and robust technology stack to build scalable and efficient solutions.
+          Enterprise-grade architecture using modern, proven technologies for security, scalability, and maintainability.
         </p>
-        <div className={styles.techGrid}>
-          {technologies.map((tech, index) => (
-            <div key={index} className={styles.techItem}>
-              {/* <i className={`${tech.iconClass} ${styles.techIcon}`}></i> */}
-              {/* O usa un componente de icono si prefieres */}
-              <span className={styles.techName}>{tech.name}</span>
+        <div className={styles.techStacksGrid}>
+          {technologyStacks.map((stack, stackIndex) => (
+            <div key={stackIndex} className={styles.techStack}>
+              <h3 className={styles.stackTitle}>{stack.category}</h3>
+              <div className={styles.techList}>
+                {stack.technologies.map((tech, techIndex) => (
+                  <div key={techIndex} className={styles.techItem}>
+                    <h4 className={styles.techName}>{tech.name}</h4>
+                    <p className={styles.techDetail}>{tech.detail}</p>
+                  </div>
+                ))}
+              </div>
             </div>
           ))}
+        </div>
+        <div className={styles.certificationBadge}>
+          <p><strong>Enterprise Standards:</strong> All implementations follow industry best practices for security (OWASP), data protection (GDPR), and high availability (99.9% uptime SLA).</p>
         </div>
       </div>
     </section>

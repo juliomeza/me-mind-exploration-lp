@@ -1,106 +1,184 @@
-/* src/components/Hero/Hero.module.css */
 .hero {
-    background-color: var(--bg-color); /* Fondo limpio */
-    position: relative;
-    min-height: calc(100vh - var(--header-height)); /* Altura mínima para llenar pantalla */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding-top: var(--header-height); /* Compensar header fijo */
-    overflow: hidden;
+  min-height: calc(100vh - var(--header-height));
+  display: flex;
+  align-items: center;
+  padding-top: calc(var(--header-height) + 2rem);
+  padding-bottom: 4rem;
+  background: linear-gradient(to bottom, hsl(var(--background)), hsl(var(--muted)) 50%, hsl(var(--background)));
+}
+
+.heroContent {
+  text-align: center;
+  max-width: 48rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.logoSection {
+  margin-bottom: 1rem;
+}
+
+.heroLogo {
+  height: 4rem;
+  width: auto;
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.07));
+  margin: 0 auto;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  border-radius: calc(var(--radius) * 2);
+  border: 1px solid hsl(var(--border));
+  background-color: hsl(var(--muted));
+  padding: 0.25rem 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: hsl(var(--muted-foreground));
+}
+
+.title {
+  font-size: clamp(2rem, 5vw, 3.75rem);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.05em;
+  color: hsl(var(--foreground));
+  margin-bottom: 0;
+}
+
+.highlight {
+  background: linear-gradient(to right, hsl(var(--primary)), hsl(var(--primary)) 60%, hsl(0, 0%, 30%));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.description {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: hsl(var(--muted-foreground));
+  max-width: 42rem;
+  margin: 0 auto;
+}
+
+.metrics {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  padding: 2rem 0;
+  width: 100%;
+  max-width: 32rem;
+  margin: 0 auto;
+}
+
+.metric {
+  text-align: center;
+  padding: 1rem;
+  border-radius: var(--radius);
+  border: 1px solid hsl(var(--border));
+  background-color: hsl(var(--card));
+}
+
+.metricValue {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: hsl(var(--foreground));
+  line-height: 1;
+  margin-bottom: 0.25rem;
+}
+
+.metricLabel {
+  font-size: 0.75rem;
+  color: hsl(var(--muted-foreground));
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 500;
+}
+
+.actions {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.pricing {
+  padding: 1rem;
+  border-radius: var(--radius);
+  background-color: hsl(var(--muted));
+  border: 1px solid hsl(var(--border));
+  margin-top: 1rem;
+}
+
+.pricingText {
+  font-size: 0.875rem;
+  color: hsl(var(--muted-foreground));
+  line-height: 1.5;
+}
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .hero {
+    padding-top: calc(var(--header-height) + 1rem);
+    padding-bottom: 2rem;
   }
   
+  .heroLogo {
+    height: 3rem;
+  }
+  
+  .metrics {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    max-width: 20rem;
+    padding: 1rem 0;
+  }
+  
+  .metric {
+    padding: 0.75rem;
+  }
+  
+  .metricValue {
+    font-size: 1.25rem;
+  }
+  
+  .actions {
+    flex-direction: column;
+    width: 100%;
+    align-items: stretch;
+  }
+  
+  .actions .btn {
+    width: 100%;
+    max-width: 20rem;
+  }
+  
+  .description {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 640px) {
   .heroContent {
-    position: relative;
-    z-index: 2;
+    gap: 1rem;
   }
   
-  .headline {
-    font-size: 3.2rem; /* Tamaño más moderado */
-    margin-bottom: 1.8rem;
-    font-weight: 600; /* Peso de fuente más sutil */
-    color: var(--primary-color);
-    letter-spacing: -0.5px; /* Espaciado más compacto para verse moderno */
-    line-height: 1.2;
+  .badge {
+    font-size: 0.6875rem;
+    padding: 0.125rem 0.5rem;
   }
   
-  .highlight {
-    /* Color de acento más sutil */
-    color: var(--secondary-color);
-    position: relative;
+  .pricing {
+    padding: 0.75rem;
   }
   
-  .subheadline {
-    font-size: 1.15rem;
-    max-width: 650px;
-    margin: 0 auto 3rem auto; /* Más espacio antes de los botones */
-    color: #555; 
-    font-weight: 400;
-    line-height: 1.7;
+  .pricingText {
+    font-size: 0.8125rem;
   }
-  
-  .ctaButtons a {
-    margin: 0 10px;
-  }
-  
-  /* Elemento visual abstracto (opcional) */
-  .visualElement {
-    position: absolute;
-    bottom: -100px;
-    right: -100px;
-    width: 400px;
-    height: 400px;
-    background: radial-gradient(circle, rgba(52, 152, 219, 0.08) 0%, rgba(52, 152, 219, 0) 70%); /* Color más sutil */
-    border-radius: 50%;
-    z-index: 1;
-    pointer-events: none; /* Para que no interfiera con clicks */
-  }
-  
-  
-  /* Tabletas */
-  @media (max-width: 768px) {
-    .hero {
-      min-height: 70vh; /* Reducir altura en móvil */
-      text-align: center;
-      padding-top: calc(var(--header-height) + 30px); /* Aumentar padding superior en móviles */
-    }
-    .headline {
-      font-size: 2.5rem;
-      margin-top: 20px; /* Espacio adicional arriba */
-    }
-    .subheadline {
-      font-size: 1rem;
-    }
-    .ctaButtons {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-    .ctaButtons a {
-      margin: 10px 0;
-      width: 80%;
-    }
-    .visualElement {
-      width: 300px;
-      height: 300px;
-      bottom: -50px;
-      right: -50px;
-    }
-  }
-  
-  /* Teléfonos pequeños */
-  @media (max-width: 480px) {
-    .hero {
-      padding-top: calc(var(--header-height) + 50px); /* Padding aún mayor para teléfonos pequeños */
-      min-height: auto; /* Altura automática para evitar problemas */
-      padding-bottom: 40px;
-    }
-    .heroContent {
-      padding-top: 10px; /* Espacio adicional superior */
-    }
-    .headline {
-      font-size: 2.1rem; /* Texto más pequeño */
-      margin-top: 25px; /* Más espacio superior */
-    }
-  }
+}

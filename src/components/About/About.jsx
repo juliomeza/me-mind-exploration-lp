@@ -9,21 +9,34 @@ const About = () => {
       <div className={`container ${styles.aboutContainer}`}>
         {/* Columna de Texto */}
         <div className={styles.textContent}>
-          <h2 className={styles.title}>Who We Are</h2>
+          <h2 className={styles.title}>Enterprise Data Intelligence Specialists</h2>
           <p className={styles.subtitle}>
-            At <strong>ME Mind Exploration</strong>, we are architects of intelligence-driven digital solutions.
+            <strong>Mind Exploration</strong> architects production-ready platforms that transform enterprise data operations at scale.
           </p>
           <p className={styles.description}>
-            We specialize in transforming complex data into strategic clarity through cutting-edge technology. We create intuitive executive dashboards, efficient sales portals, and perform robust system integrations (SQL, APIs, etc.), all powered by intelligent analysis and AI models.
+            We deliver complete, integrated solutions—not individual components. Our $45,000 implementation includes secure authentication, real-time ETL pipelines, carrier integrations, AI-powered analytics, and comprehensive monitoring. Every platform is built to enterprise standards with 99.9% uptime guarantees.
           </p>
           <p className={styles.description}>
-            Using tools like Python and React, and staying current with the latest advances in AI, we build the tools you need to explore the hidden potential in your data and optimize your business processes. We also design attractive and functional landing pages to enhance your online presence.
+            With deep expertise in SQL Server to PostgreSQL migrations, Firebase authentication, and OpenAI integration, we handle the complex technical architecture so you can focus on business growth. Our platforms include 2+ years of historical data backfill and ongoing 24/7 support.
           </p>
+          <div className={styles.keyMetrics}>
+            <div className={styles.metric}>
+              <span className={styles.metricNumber}>99.9%</span>
+              <span className={styles.metricLabel}>Uptime SLA</span>
+            </div>
+            <div className={styles.metric}>
+              <span className={styles.metricNumber}>$3K/mo</span>
+              <span className={styles.metricLabel}>Support</span>
+            </div>
+            <div className={styles.metric}>
+              <span className={styles.metricNumber}>100+</span>
+              <span className={styles.metricLabel}>Min Users</span>
+            </div>
+          </div>
           <div className={styles.values}>
-            {/* You can list some key values here if you wish */}
-            <span><i className={`fas fa-check ${styles.checkIcon}`}></i> Constant Innovation</span>
-            <span><i className={`fas fa-check ${styles.checkIcon}`}></i> Tailored Solutions</span>
-            <span><i className={`fas fa-check ${styles.checkIcon}`}></i> Cutting-Edge Technology</span>
+            <span><i className={`fas fa-check ${styles.checkIcon}`}></i> Enterprise Security Standards</span>
+            <span><i className={`fas fa-check ${styles.checkIcon}`}></i> Production-Ready Architecture</span>
+            <span><i className={`fas fa-check ${styles.checkIcon}`}></i> 24/7 Monitoring & Support</span>
           </div>
         </div>
 

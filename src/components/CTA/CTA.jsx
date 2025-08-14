@@ -6,14 +6,29 @@ const CTA = () => {
   return (
     <section id="contact" className={`${styles.ctaSection} section section-bg`}>
       <div className={`container ${styles.ctaContainer}`}>
-        <h2 className={styles.ctaTitle}>Ready to Explore Your Potential?</h2>
+        <h2 className={styles.ctaTitle}>Ready for Enterprise-Grade Data Intelligence?</h2>
         <p className={styles.ctaText}>
-          Let's talk about how ME Mind Exploration can help you achieve your goals with innovative technological solutions.
+          Schedule a technical consultation to discuss your platform requirements. Our $45,000 implementation includes everything you need for production deployment with ongoing enterprise support.
         </p>
-        {/* Change this to a mailto, contact form link, or modal */}
-        <a href="mailto:contact@memindexploration.com" className="btn btn-primary">
-          Let's Discuss Your Project
-        </a>
+        <div className={styles.ctaDetails}>
+          <div className={styles.ctaDetail}>
+            <strong>Implementation:</strong> Complete platform in 8-12 weeks
+          </div>
+          <div className={styles.ctaDetail}>
+            <strong>Support:</strong> $30/user/month (100 user minimum)
+          </div>
+          <div className={styles.ctaDetail}>
+            <strong>SLA:</strong> 99.9% uptime with 24/7 monitoring
+          </div>
+        </div>
+        <div className={styles.ctaButtons}>
+          <a href="mailto:contact@mindexploration.ai" className="btn btn-primary">
+            Schedule Technical Consultation
+          </a>
+          <a href="#services" className="btn btn-secondary">
+            Review Platform Features
+          </a>
+        </div>
       </div>
     </section>
   );

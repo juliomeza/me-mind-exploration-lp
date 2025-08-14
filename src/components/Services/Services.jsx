@@ -1,53 +1,97 @@
-// src/components/Services/Services.js
 import React from 'react';
 import styles from './Services.module.css';
-// Importa iconos (ej. de react-icons, instala con: npm install react-icons)
-import { FaTachometerAlt, FaDatabase, FaLaptopCode, FaFileAlt, FaBrain } from 'react-icons/fa';
+import { FaShieldAlt, FaDatabase, FaRobot, FaChartLine, FaServer, FaCogs } from 'react-icons/fa';
 
-const servicesData = [
+const platformFeatures = [
   {
-    icon: <FaTachometerAlt />,
-    title: 'Executive Dashboards',
-    description: 'Interactive and real-time data visualizations for informed decision-making.'
-  },
-  {
-    icon: <FaFileAlt />,
-    title: 'Sales Order Portals',
-    description: 'Efficient web solutions for sales order management, integrated with your systems.'
+    icon: <FaShieldAlt />,
+    title: 'Secure Authentication',
+    description: 'Role-based access control with Firebase, session management, and comprehensive audit logging.',
+    features: ['Multi-role access', 'Session expiration', 'Complete audit trails']
   },
   {
     icon: <FaDatabase />,
-    title: 'Data Integration',
-    description: 'We connect your databases (SQL, NoSQL, etc.) and APIs for a unified information flow.'
-  },
-   {
-    icon: <FaBrain />,
-    title: 'AI Solutions',
-    description: 'We implement Artificial Intelligence models to optimize processes, predict trends, and more.'
+    title: 'Real-Time ETL',
+    description: 'Bi-directional data sync between SQL Server and PostgreSQL with 2+ years historical backfill.',
+    features: ['Bi-directional sync', '2+ years backfill', 'Automated retries']
   },
   {
-    icon: <FaLaptopCode />,
-    title: 'Landing Pages & Web Apps',
-    description: 'Design and development of professional, fast, and attractive web presences with React and Python.'
+    icon: <FaCogs />,
+    title: 'Carrier Integration',
+    description: 'Production-ready integrations with FedEx, UPS, and USPS for logistics management.',
+    features: ['Major carrier APIs', 'Real-time tracking', 'Rate limiting']
+  },
+  {
+    icon: <FaRobot />,
+    title: 'AI Analytics',
+    description: 'OpenAI-powered chatbot with natural language querying and instant visualizations.',
+    features: ['Natural language', 'Instant charts', 'Usage guardrails']
+  },
+  {
+    icon: <FaChartLine />,
+    title: 'Executive Dashboards',
+    description: 'Advanced reporting with predefined templates, filters, and multi-format exports.',
+    features: ['Executive templates', 'Advanced filters', 'Multi-format export']
+  },
+  {
+    icon: <FaServer />,
+    title: 'Enterprise Infrastructure',
+    description: '24/7 monitoring, health checks, secure API management, and high availability.',
+    features: ['24/7 monitoring', 'Auto key rotation', 'High availability']
   }
 ];
 
 const Services = () => {
   return (
-    <section id="services" className="section section-bg">
+    <section id="services" className="section section-muted">
       <div className="container">
-        <h2 className={styles.sectionTitle}>Our Technology Solutions</h2>
-        <p className={styles.sectionSubtitle}>We create custom tools to enhance your business.</p>
-        <div className={styles.servicesGrid}>
-          {servicesData.map((service, index) => (
-            <div key={index} className={styles.serviceCard}>
-              <div className={styles.iconWrapper}>
-                {service.icon}
+        <div className={styles.header}>
+          <h2 className={styles.title}>Platform Features</h2>
+          <p className={styles.description}>
+            Production-ready architecture with enterprise-grade security, reliability, and scalability.
+          </p>
+        </div>
+        
+        <div className={styles.grid}>
+          {platformFeatures.map((feature, index) => (
+            <div key={index} className={`card ${styles.featureCard}`}>
+              <div className="card-header">
+                <div className={styles.iconWrapper}>
+                  {feature.icon}
+                </div>
+                <div>
+                  <h3 className="card-title">{feature.title}</h3>
+                  <p className="card-description">{feature.description}</p>
+                </div>
               </div>
-              <h3 className={styles.cardTitle}>{service.title}</h3>
-              <p className={styles.cardDescription}>{service.description}</p>
+              
+              <div className="card-content">
+                <ul className={styles.featureList}>
+                  {feature.features.map((item, itemIndex) => (
+                    <li key={itemIndex} className={styles.featureItem}>
+                      <div className={styles.checkIcon}>✓</div>
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
           ))}
+        </div>
+        
+        <div className={styles.pricing}>
+          <div className={`card ${styles.pricingCard}`}>
+            <div className="card-header text-center">
+              <h3 className="card-title">Complete Platform Implementation</h3>
+              <p className="card-description">
+                All features included - no individual modules. Enterprise-grade solution with full support.
+              </p>
+            </div>
+            <div className="card-content text-center">
+              <div className={styles.price}>$45,000</div>
+              <p className={styles.priceDescription}>One-time implementation fee</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>

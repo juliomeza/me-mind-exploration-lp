@@ -6,47 +6,102 @@
   
   .sectionSubtitle {
     text-align: center;
-    margin-bottom: 3rem;
-    max-width: 600px;
+    margin-bottom: 4rem;
+    max-width: 700px;
     margin-left: auto;
     margin-right: auto;
     color: #666;
   }
   
-  .techGrid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
+  .techStacksGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
   }
   
-  .techItem {
-    background-color: var(--bg-light-gray);
-    padding: 15px 25px;
-    border-radius: 25px; /* Forma de píldora */
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 1rem;
-    font-weight: 400;
-    color: var(--primary-color);
+  .techStack {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    padding: 2rem;
+    border-radius: 8px;
     border: 1px solid var(--border-color);
     transition: all 0.3s ease;
   }
   
-  .techItem:hover {
-      background-color: var(--primary-color);
-      color: var(--text-light);
-      border-color: var(--primary-color);
-      transform: scale(1.05);
+  .techStack:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
   }
   
-  /* Estilos para iconos si los usas */
-  .techIcon {
-    font-size: 1.5rem;
-    color: inherit; /* Hereda el color del texto del item */
+  .stackTitle {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    text-align: center;
+    border-bottom: 2px solid var(--secondary-color);
+    padding-bottom: 0.5rem;
+  }
+  
+  .techList {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .techItem {
+    background-color: white;
+    padding: 1rem;
+    border-radius: 6px;
+    border-left: 3px solid var(--secondary-color);
+    transition: all 0.2s ease;
+  }
+  
+  .techItem:hover {
+    background-color: #f8f9fa;
+    border-left-width: 5px;
   }
   
   .techName {
-    color: inherit; /* Hereda el color del texto del item */
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin: 0 0 0.25rem 0;
+  }
+  
+  .techDetail {
+    font-size: 0.85rem;
+    color: #666;
+    margin: 0;
+    line-height: 1.4;
+  }
+  
+  .certificationBadge {
+    background: linear-gradient(135deg, var(--secondary-color) 0%, #1a5d7a 100%);
+    color: white;
+    padding: 1.5rem 2rem;
+    border-radius: 8px;
+    text-align: center;
+    margin-top: 2rem;
+  }
+  
+  .certificationBadge p {
+    margin: 0;
+    font-size: 1rem;
+  }
+  
+  /* Mobile responsiveness */
+  @media (max-width: 768px) {
+    .techStacksGrid {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+    
+    .techStack {
+      padding: 1.5rem;
+    }
+    
+    .certificationBadge {
+      padding: 1.25rem 1.5rem;
+    }
   }
